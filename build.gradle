@@ -82,12 +82,8 @@ sourceSets.main.resources { srcDir 'src/generated/resources' }
 
 dependencies {
     // do not compile against
-     runtimeOnly "curse.maven:configured-457570:${configured_version}"
+//    runtimeOnly "curse.maven:configured-457570:${configured_version}"
     runtimeOnly "curse.maven:catalogue-459701:${catalogue_version}"
-
-    // optional dependencies
-//    runtimeOnly "maven.modrinth:sleep-tight:${st_version}"
-//    runtimeOnly "maven.modrinth:moonlight:${moonlight_version}"
 }
 
 tasks.withType(ProcessResources).configureEach {

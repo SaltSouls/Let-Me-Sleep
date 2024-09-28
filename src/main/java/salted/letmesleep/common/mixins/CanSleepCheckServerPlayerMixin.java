@@ -23,7 +23,7 @@ public abstract class CanSleepCheckServerPlayerMixin {
     }
 
     @WrapOperation(method = "startSleepInBed", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/level/Level;getEntitiesOfClass(Ljava/lang/Class;Lnet/minecraft/world/phys/AABB;Ljava/util/function/Predicate;)Ljava/util/List;"))
-    public List betterCheck(Level level, Class<Monster> clazz, AABB aabb, Predicate<Monster> predicate, Operation<List<Monster>> original) {
+    public List<Monster> betterCheck(Level level, Class<Monster> clazz, AABB aabb, Predicate<Monster> predicate, Operation<List<Monster>> original) {
         ServerPlayer player = (ServerPlayer) (Object) this;
         int h = IConfig.getHorizontalRange();
         int v = IConfig.getVerticalRange();

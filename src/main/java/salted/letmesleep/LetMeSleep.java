@@ -1,12 +1,14 @@
 package salted.letmesleep;
 
 import net.minecraft.resources.ResourceLocation;
-import net.minecraftforge.fml.ModLoadingContext;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.config.ModConfig;
+import net.neoforged.bus.api.IEventBus;
+import net.neoforged.fml.ModContainer;
+import net.neoforged.fml.common.Mod;
+import net.neoforged.neoforge.client.gui.ConfigurationScreen;
+import net.neoforged.neoforge.client.gui.IConfigScreenFactory;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import salted.letmesleep.common.config.Config;
+import salted.letmesleep.common.Config;
 
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(LetMeSleep.MODID)
@@ -14,12 +16,12 @@ public class LetMeSleep {
     public static final String MODID = "letmesleep";
     public static final Logger LOGGER = LogManager.getLogger();
 
-    public LetMeSleep() {
-        ModLoadingContext ctx = ModLoadingContext.get();
-        ctx.registerConfig(ModConfig.Type.COMMON, Config.COMMON_SPEC);
+    public LetMeSleep(ModContainer container) {
+        container.registerConfig(net.neoforged.fml.config.ModConfig.Type.COMMON, Config.COMMON_CONFIG);
+        container.registerExtensionPoint(IConfigScreenFactory.class, ConfigurationScreen::new);
     }
 
     public static ResourceLocation resLoc(String path) {
-        return new ResourceLocation(MODID, path);
+        return ResourceLocation.fromNamespaceAndPath(MODID, path);
     }
 }

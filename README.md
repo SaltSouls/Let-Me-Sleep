@@ -1,16 +1,11 @@
 <div align="center"><img src="https://cdn.modrinth.com/data/cached_images/9a1df43af41ee5516e157dea1cc2f532b7380e43.png" /></div>
 
-[//]: # (<div align="center">)
-
-[//]: # (	<img src="https://img.shields.io/badge/mod%20loader-forge%20%2F%20neoforge-blue?style=flat-square" />)
-
-[//]: # (	<img src="https://img.shields.io/modrinth/game-versions/gfvSVUz9?style=flat-square&label=avaliable%20for&color=blue" />)
-
-[//]: # (	<img src="https://img.shields.io/modrinth/dt/gfvSVUz9?style=flat-square&logo=modrinth&logoSize=auto&color=4caf50" />)
-
-[//]: # (	<img src="https://img.shields.io/curseforge/dt/683324?style=flat-square&logo=curseforge&logoSize=auto&color=4caf50" />)
-
-[//]: # (</div>)
+<div align="center">
+<img src="https://img.shields.io/badge/mod%20loader-forge%20%2F%20neoforge-blue?style=flat-square" />
+<img src="https://img.shields.io/modrinth/game-versions/m7tiOGaI?style=flat-square&label=avaliable%20for&color=blue" />
+<img src="https://img.shields.io/modrinth/dt/m7tiOGaI?style=flat-square&logo=modrinth&logoSize=auto&color=4caf50" />
+<img src="https://img.shields.io/curseforge/dt/1111436?style=flat-square&logo=curseforge&logoSize=auto&color=4caf50" />
+</div>
 
 **Let Me Sleep** is a simple mod designed around the idea of making the monster check when trying to sleep more sensible. This is done by making it so that only monsters currently tracking the player will prevent sleeping.
 

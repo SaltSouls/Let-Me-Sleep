@@ -1,0 +1,9 @@
+{
+  "letmesleep.config.CATEGORY_GENERAL": "General Settings",
+  "letmesleep.config.MOB_CHECK": "Monster Check",
+  "letmesleep.config.BETTER_CHECKING": "Better Checking",
+  "letmesleep.config.HORIZONTAL_RANGE": "Horizontal Range",
+  "letmesleep.config.VERTICAL_RANGE": "Vertical Range",
+
+  "calmmornings.sleep.not_safe": "A hostile presence wakes you..."
+}

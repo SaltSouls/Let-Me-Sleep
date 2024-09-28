@@ -1,10 +1,11 @@
 {
   "required": true,
   "minVersion": "0.8",
-  "package": "salted.letmesleep.mixin",
-  "compatibilityLevel": "JAVA_8",
+  "package": "salted.letmesleep.common.mixins",
+  "compatibilityLevel": "JAVA_17",
   "refmap": "letmesleep.refmap.json",
   "mixins": [
+    "CanSleepCheckServerPlayerMixin"
   ],
   "client": [
   ],

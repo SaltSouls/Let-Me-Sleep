@@ -3,12 +3,6 @@ package salted.letmesleep.common.config;
 import net.minecraftforge.common.ForgeConfigSpec;
 import org.apache.commons.lang3.tuple.Pair;
 import salted.letmesleep.LetMeSleep;
-import salted.letmesleep.common.managers.utils.TimeUtils.Time;
-
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.List;
 
 public class Config implements IConfig {
     public static final ForgeConfigSpec COMMON_SPEC;
@@ -27,6 +21,7 @@ public class Config implements IConfig {
         public final ForgeConfigSpec.IntValue HORIZONTAL_RANGE;
 
         public CommonConfig(ForgeConfigSpec.Builder builder) {
+            String modid = LetMeSleep.MODID;
             String CATEGORY_GENERAL = "general";
             builder.comment("General Settings").translation(modid + ".config." + "CATEGORY_GENERAL").push(CATEGORY_GENERAL);
             MOB_CHECK = builder
@@ -35,17 +30,17 @@ public class Config implements IConfig {
                     .define("monsterCheck", true);
 
             BETTER_CHECKING = builder
-                    .comment("Should only monsters tracking the player prevent sleep? Requires monsterCheck.")
+                    .comment("Should only monsters tracking the player prevent sleep? [Requires monsterCheck]")
                     .translation(modid + ".config." + "BETTER_CHECKING")
                     .define("betterChecking", true);
                     
             HORIZONTAL_RANGE = builder
-                    .comment("Horizontal radius to check for mobs to despawn.")
+                    .comment("Horizontal radius to check for monsters. [Requires betterChecking]")
                     .translation(modid + ".config." + "HORIZONTAL_RANGE")
-                    .defineInRange("horizontalRange", () -> 64, 0, 256);
+                    .defineInRange("horizontalRange", () -> 32, 0, 256);
 
             VERTICAL_RANGE = builder
-                    .comment("Vertical radius to check for mobs to despawn.")
+                    .comment("Vertical radius to check for monsters. [Requires betterChecking]")
                     .translation(modid + ".config." + "VERTICAL_RANGE")
                     .defineInRange("verticalRange", () -> 16, 0, 64);
             builder.pop();

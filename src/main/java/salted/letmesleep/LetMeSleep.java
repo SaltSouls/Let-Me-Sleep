@@ -8,6 +8,8 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import salted.letmesleep.common.Config;
 
+import static net.neoforged.fml.config.ModConfig.Type.COMMON;
+
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(LetMeSleep.MODID)
 public class LetMeSleep {
@@ -15,7 +17,7 @@ public class LetMeSleep {
     public static final Logger LOGGER = LogManager.getLogger();
 
     public LetMeSleep(ModContainer container) {
-        container.registerConfig(net.neoforged.fml.config.ModConfig.Type.COMMON, Config.COMMON_CONFIG);
+        container.registerConfig(COMMON, Config.COMMON_CONFIG);
     }
 
     public static ResourceLocation resLoc(String path) {

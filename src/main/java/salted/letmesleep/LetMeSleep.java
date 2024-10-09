@@ -4,8 +4,6 @@ import net.minecraft.resources.ResourceLocation;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.common.Mod;
-import net.neoforged.neoforge.client.gui.ConfigurationScreen;
-import net.neoforged.neoforge.client.gui.IConfigScreenFactory;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import salted.letmesleep.common.Config;
@@ -18,7 +16,6 @@ public class LetMeSleep {
 
     public LetMeSleep(ModContainer container) {
         container.registerConfig(net.neoforged.fml.config.ModConfig.Type.COMMON, Config.COMMON_CONFIG);
-        container.registerExtensionPoint(IConfigScreenFactory.class, ConfigurationScreen::new);
     }
 
     public static ResourceLocation resLoc(String path) {
